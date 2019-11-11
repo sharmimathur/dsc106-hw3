@@ -71,20 +71,32 @@ function syncExtremes(e) {
 
 // Get the data. The contents of the data file can be viewed at
 Highcharts.ajax({
-    url: 'C://Users//sharm//Downloads//sample_data.json',
-    dataType: 'json',
+    url: 'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/activity.json',
+    //'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/activity.json',
+    //'https://raw.githubusercontent.com/sharmimathur/dsc106-hw3/master/assets/sample_data.json',
+    dataType: 'text',
     success: function (activity) {
 
         console.log('initialize');
         activity = JSON.parse(activity);
         console.log(activity);
+
+        console.log(activity.id);
+        console.log(activity.datasets);
+        //TODO: try for loop to see how to access the data
+        
         activity.datasets.forEach(function (dataset, i) {
 
             // Add X values
             // TODO: change how to get the xvalues
             // something about dataset.data here and below, see what the og code meant and where it got it from
+            // dataset.data = Highcharts.map(dataset.data, function (val, j) {
+            //     return [dataset.start[j], val];
+            // });
+
+            //so this one returns [x, y]
             dataset.data = Highcharts.map(dataset.data, function (val, j) {
-                return [dataset.start[j], val];
+                return [activity.xData[j], val];
             });
 
             console.log("creation");
@@ -124,6 +136,13 @@ Highcharts.ajax({
                 yAxis: {
                     title: {
                         text: null
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        // TODO: CHANGE W NEW DATA
+                        pointStart: Date.UTC(2010, 5, 3),
+                        pointInterval: 24 * 3600 * 1000 // one day
                     }
                 },
                 tooltip: {
@@ -170,7 +189,7 @@ let sharedConfig = {
   graphset : [
     {
       // config for the energy stacked area graph
-      type: 'line',
+      type: 'area',
       title: {
         text: 'Generation MW',
         fontSize: 18,
