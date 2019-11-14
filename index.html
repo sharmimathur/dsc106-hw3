@@ -30,105 +30,206 @@
             <!-- Internal JS Import -->
             <script src="main.js"></script>
         </td>
-        <td id="legendGrid">The Legend table goes here
+        <td id="legendGrid">
+            <style type="text/css">
+                .tg  {
+                    border-collapse:collapse;
+                    border-spacing:10px;
+                    margin-bottom: 0px;
+                    margin-top: 0px;
+                    border: 0px;
+                }
+                .tg td{
+                    border-collapse:collapse;
+                    font-family:Georgia, 'Times New Roman', Times, serif;
+                    font-size:14px;
+                    padding:5px 0px;
+                    overflow:hidden;
+                    word-break:normal;
+                    border: 0px;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+                .tg th{
+                    border-collapse:collapse;
+                    font-family:Georgia, 'Times New Roman', Times, serif;
+                    font-size:14px;
+                    font-weight:normal;
+                    padding:10px 5px;
+                    overflow:hidden;
+                    word-break:normal;
+                    border:0px;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+                .tg .tg-qgz6{
+                    border-collapse:collapse;
+                    font-family:Georgia, 'Times New Roman', Times, serif !important;;
+                    border: 0px;
+                    text-align:left;
+                    vertical-align:top;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                    
+                }
+                .tg .tg-zq73{                    
+                    border-collapse:collapse;
+                    font-weight:bold;
+                    font-family:Georgia, 'Times New Roman', Times, serif !important;;
+                    border: 0px;
+                    text-align:left;
+                    vertical-align:top;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+                
+            </style>
+            <div id = 'date' style="font-weight:bold; font-family: Georgia, 'Times New Roman', Times, serif;"></div>
+            <table class="tg">
+                
+                <!-- Top Labels -->
+                <tr>
+                <th class="tg-qgz6"></th>
+                <th class="tg-zq73">Power</th>
+                <th class="tg-zq73">Contribution</th>
+                <th class="tg-zq73">AvValue</th>
+                </tr>
+        
+                <!-- Units -->
+                <tr>
+                <td class="tg-qgz6" style="font-weight:bold; border-top: 0.5px solid #d3d3d3;"></td>
+                <td class="tg-qgz6" id = 'unit' style="font-weight:bold; columns: #ebebeb5e;  border-top: 0.5px solid #d3d3d3;">(MW)</td>
+                <td class="tg-qgz6" id = 'unit' style="font-weight:bold; border-top: 0.5px solid #d3d3d3;">(to demand)</td>
+                <td class="tg-qgz6" id = 'unit' style="font-weight:bold; border-top: 0.5px solid #d3d3d3;">($ MW/h)</td>
+                </tr>
 
+                <!-- Sources -->
+                <tr>
+                <td class="tg-qgz6" style="font-weight:bold; border-top: 0.5px solid #d3d3d3;">Sources</td>
+                <td class="tg-qgz6" id = 'power_source' style="font-weight:bold; border-top: 0.5px solid #d3d3d3;"></td>
+                <td class="tg-qgz6" id = 'contr_source' style="font-weight:bold; border-top: 0.5px solid #d3d3d3;"></td>
+                <td class="tg-qgz6" id = 'av_source' style="font-weight:bold; border-top: 0.5px solid #d3d3d3;"></td>
+                </tr>
 
-                <style type="text/css">
-                    .tg  {border-collapse:collapse;border-spacing:0;}
-                    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-                    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-                    .tg .tg-0lax{text-align:left;vertical-align:top}
-                </style>
-                <table class="tg">
-                    <tr>
-                    <th class="tg-0lax"></th>
-                    <th class="tg-0lax"></th>
-                    <th class="tg-0lax"></th>
-                    <th class="tg-0lax"></th>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                    <tr>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    <td class="tg-0lax"></td>
-                    </tr>
-                </table>
+                <!-- Wind -->
+                <tr>
+                <td class="tg-qgz6" id = 'power_label' style = 'border-top: 0.5px solid #d3d3d3;'>
+                        <div class = 'box' style = 'background-color: #008129'></div>
+                        Wind
+                </td>
+                <td class="tg-qgz6" id = 'power_wind' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'contr_wind' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_wind' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Hydro -->
+                <tr>
+                <td class="tg-qgz6" id = 'power_label' style = 'border-top: 0.5px solid #d3d3d3;'>
+                    <div class = 'box' style = 'background-color: #0561AD'></div>
+                    Hydro
+                </td>
+                <td class="tg-qgz6" id = 'power_hydro' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'contr_hydro' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_hydro' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Gas -->
+                <tr>
+                <td class="tg-qgz6" id = 'power_label' style = 'border-top: 0.5px solid #d3d3d3;'>
+                    <div class = 'box' style = 'background-color: #FF9136'></div>
+                    Gas (CCGT)
+                </td>
+                <td class="tg-qgz6" id = 'power_gas_ccgt' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'contr_gas_ccgt' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_gas_ccgt' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Distillate -->
+                <tr>
+                <td class="tg-qgz6" id = 'power_label' style = 'border-top: 0.5px solid #d3d3d3;'>
+                    <div class = 'box' style = 'background-color: #FF0000'></div>
+                    Distillate
+                </td>
+                <td class="tg-qgz6" id = 'power_distillate' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'contr_distillate' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_distillate' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Black Coal -->
+                <tr>
+                <td class="tg-qgz6" id = 'power_label' style = 'border-top: 0.5px solid #d3d3d3;'>
+                    <div class = 'box' style ='background-color: #000000'></div>
+                    Black Coal
+                </td>
+                <td class="tg-qgz6" id = 'power_black_coal' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'contr_black_coal' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_black_coal' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Loads -->
+                <tr>
+                <td class="tg-zq73" style = 'border-top: 0.5px solid #d3d3d3;'>
+                    Loads
+                </td>
+                <td class="tg-qgz6" id = 'power_loads' style="font-weight:bold; border-top: 0.5px solid #d3d3d3;"></td>
+                <td class="tg-qgz6" id = 'contr_loads' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_loads' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Exports -->
+                <tr>
+                <td class="tg-qgz6" style = 'border-top: 0.5px solid #d3d3d3;'>
+                    <div class = 'box' style = 'background-color: #f5e1f7'></div>
+                    Exports
+                </td>
+                <td class="tg-qgz6" id = 'power_exports' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'contr_exports' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_exports' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Pumps -->
+                <tr>
+                <td class="tg-qgz6" style = 'border-top: 0.5px solid #d3d3d3;'>
+                    <div class = 'box' style = 'background-color: #94cef2'></div>
+                    Pumps
+                </td>
+                <td class="tg-qgz6" id = 'power_pumps' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'contr_pumps' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_pumps' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Net -->
+                <tr>
+                <td class="tg-qgz6" style = 'font-weight: bold; border-top: 0.5px solid #d3d3d3;'>
+                    Net
+                </td>
+                <td class="tg-qgz6" id = 'power_net' style = 'font-weight: bold; border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'contr_net' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                <td class="tg-qgz6" id = 'av_net' style = 'border-top: 0.5px solid #d3d3d3;'></td>
+                </tr>
+
+                <!-- Renewables -->
+                <tr>
+                <td class="tg-qgz6" style = 'font-weight: bold; border-top: 2px solid black; border-bottom: 2px solid black;'>
+                    Renewables
+                </td>
+                <td class="tg-qgz6" id = 'power_renew' style = 'border-top: 2px solid black; border-bottom: 2px solid black;'></td>
+                <td class="tg-qgz6" id = 'contr_renew' style = 'border-top: 2px solid black; font-weight: bold; border-bottom: 2px solid black;;'></td>
+                <td class="tg-qgz6" id = 'av_renew' style = 'border-top: 2px solid black; border-bottom: 2px solid black;'></td>
+                </tr>
+            </table>
+
+                
         </td>
       </tr>
       
 
       <tr>
         <td id="pieGrid">
-
-            <button id="switch">Pie chart</button>
-
+            
         </td>
+
+       
       </tr>
     </table>
 
