@@ -449,11 +449,11 @@ function plotPie(dataset) {
             },
             plotOptions: {
                 pie: {
-                    innerSize: '40%',
+                    innerSize: '50%',
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: false,
-                    }   
+                    },
                 },
                 area: {
                     lineColor: '#666666',
@@ -569,7 +569,6 @@ function plotPie(dataset) {
                 .attr({
                     zIndex: 3
                 })
-                
                 .on('click', function () {
                     pie = true;
                     plotPie(dataset);
@@ -582,7 +581,8 @@ function plotPie(dataset) {
     // Date on top of legend
 
     var p = document.createElement('p');
-    p.innerHTML = '' + dataset[0].x;
+    p.innerHTML = '' + Highcharts.time.dateFormat('%d %b, %H:%M %p', dataset[0].x);
+    
     var node = document.getElementById('date');
     while (node.hasChildNodes()) {
         node.removeChild(node.lastChild);
