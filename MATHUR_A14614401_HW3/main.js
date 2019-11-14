@@ -99,7 +99,7 @@ var powers = []
 
 // Get the data. The contents of the data file can be viewed at
 Highcharts.ajax({
-    url: 'https://raw.githubusercontent.com/sharmimathur/dsc106-hw3/master/assets/springfield.json',
+    url: 'https://raw.githubusercontent.com/sharmimathur/dsc106-hw3/master/MATHUR_A14614401_HW3/assets/springfield.json',
     //'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/activity.json',
     //'https://raw.githubusercontent.com/sharmimathur/dsc106-hw3/master/assets/sample_data.json',
     //'https://raw.githubusercontent.com/sharmimathur/dsc106-hw3/master/assets/springfield.json',
@@ -581,7 +581,7 @@ function plotPie(dataset) {
     // Date on top of legend
 
     var p = document.createElement('p');
-    p.innerHTML = '' + Highcharts.time.dateFormat('%d %b, %H:%M %p', dataset[0].x);
+    p.innerHTML = '' + Highcharts.time.dateFormat('%d %b, %I:%M %p', dataset[0].x);
     
     var node = document.getElementById('date');
     while (node.hasChildNodes()) {
